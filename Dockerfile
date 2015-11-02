@@ -1,6 +1,7 @@
 FROM debian
 
 ENV APT_PROXY http://192.168.1.10:3128
+ENV TORAN_PROXY_VERSION 1.1.7
 
 RUN \
   echo "\n\
