@@ -1,0 +1,8 @@
+toran:
+  build: .
+  restart: always
+  ports:
+    - "8000:8000"
+#   volumes:
+#     - "./data:/toran-data"
+#     - "./data/config.yml:/toran/app/toran/config.yml"
