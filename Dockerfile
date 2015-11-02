@@ -20,14 +20,17 @@ RUN apt-get install \
   php5-cli \
   php5-fpm \
   nginx \
-#  curl \
+ curl \
 #  php5-mcrypt \
   -y
 
 # RUN apt-get install vim net-tools -y
 
+# COPY toran /toran
+RUN curl -sL https://toranproxy.com/releases/toran-proxy-v${TORAN_PROXY_VERSION}.tgz | tar xzC /tmp \
+    && mv /tmp/toran /
+
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-COPY toran /toran
 COPY toran.sh /toran.sh
 COPY config/auth.json /toran/auth.json
 COPY config/toran-http.conf /etc/nginx/sites-enabled/toran-http.conf
