@@ -1,4 +1,4 @@
 toran:
   extends:
-    file: production-vars.yml
+    file: srv/production-vars.yml
     service: toran
