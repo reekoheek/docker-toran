@@ -4,5 +4,6 @@ toran:
   ports:
     - "8000:8000"
 #   volumes:
-#     - "./data:/toran-data"
-#     - "./data/config.yml:/toran/app/toran/config.yml"
+#     - "./srv/toran:/toran-data"
+#     - "./srv/toran/config.yml:/toran/app/toran/config.yml"
+#     - "./srv/toran/cache:/toran/app/toran/cache"

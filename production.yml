@@ -1,7 +1,4 @@
 toran:
   extends:
-    file: base.yml
+    file: production-vars.yml
     service: toran
-  build: .
-  volumes:
-    - "/srv/toran:/toran-data"
